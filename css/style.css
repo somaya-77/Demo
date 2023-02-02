@@ -1,0 +1,788 @@
+/*               START Global                       */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Open+Sans:wght@300;400;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Patrick+Hand&family=Poppins:ital,wght@0,400;1,200;1,600&family=Roboto:ital,wght@0,100;1,100&display=swap');
+
+:root {
+    --purple-color: #5b2258;
+    --pink-color: #9E4B47;
+    --bg-color: #23276e;
+    --bglight-color: #da4fd3;
+    --bg-header: #2d394b;
+    --light-color: #9cc9f5;
+    --green-color: #31af36;
+    --gray-color: #8a94a4;
+    --black-color: #243238;
+    --icon-color: #5bbad5;
+    --bg-li: #5b225891;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+main{
+    width: 90%;
+}
+a {
+    text-decoration: none;
+}
+i{
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+button{
+    border: none;
+    outline: none;
+}
+.container {
+    width: 100%;
+}
+
+
+/* timerdown */
+
+.timerdown{
+    color: #fff;
+}
+.timerdown span {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    line-height: 90px;
+    border-radius: 50%;
+    font-size: 20px;
+    
+    margin: 0 15px;
+    position: relative;
+}
+
+.timerdown span:last-child::after,
+.timerdown span:nth-child(3)::after,
+.timerdown span:nth-child(2)::after,
+.timerdown span:first-child::after{
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.timerdown span:last-child::after{
+    background-color: var(--icon-color);
+    box-shadow: 0 0 10px var(--icon-color);
+
+}
+.timerdown span:nth-child(3)::after{
+    background-color: var(--purple-color);
+    box-shadow: 0 0 10px var(--purple-color);
+
+}
+.timerdown span:nth-child(2)::after{
+    background-color: var(--light-color);
+    box-shadow: 0 0 10px var(--light-color);
+
+}
+.timerdown span:first-child::after{
+    background-color: var(--bglight-color);
+    box-shadow: 0 0 10px var(--bglight-color);
+
+}
+.timerdown span:first-child {
+    border: 5px solid var(--bglight-color);
+}
+.timerdown span:nth-child(2) {
+    border: 5px solid var(--light-color);
+}
+.timerdown span:nth-child(3) {
+    border: 5px solid var(--purple-color);
+}
+.timerdown span:last-child {
+    border: 5px solid var(--icon-color);
+}
+/*                    END GLOBAL                           */
+
+/* ************************************************************************************************************** */
+/* START HOME BACKGROUN */
+.bg-home {
+    background-image: url(../images/cointech.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.fa-caret-right {
+    color: #fff;
+    font-size: 30px;
+    background-color: var(--bg-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    margin-left: 30px;
+    margin-top: 10px;
+    box-shadow: 0 0 20px var(--bg-color);
+    animation: animatebtn 5s linear infinite;
+}
+@keyframes animatebtn {
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.3);
+
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+.fa-caret-right:hover {
+    background-color: var(--bglight-color);
+}
+.btn-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title-home span {
+    text-align: center;
+    display: inline-block;
+    margin-top: 30px;
+}
+.rotate-image img{
+    position: absolute;
+    opacity: 0.5;
+}
+.rotate-image img:first-child {
+    right: 120px;
+    top: 100px;
+    animation: animateImg 40s linear infinite;
+}
+@keyframes animateImg {
+    0% {
+        transform: rotate(-150deg);
+    }
+}
+
+.rotate-image img:nth-child(2) {
+    left: 120px;
+    bottom: 45px;
+    animation: animateImgTwo 10s linear infinite;
+}
+
+@keyframes animateImgTwo {
+    0% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.rotate-image img:last-child {
+    left: 60px;
+    top: 130px;
+    animation: animateImgThree 10s linear infinite;
+}
+@keyframes animateImgThree {
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(20px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+/* END HOME BACKGROUND */
+
+/* ********************************************************************** */
+
+.title-home {
+    margin-top: 25px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: #fff;
+}
+
+.title-home .title-h {
+    text-align: center;
+}
+.title-home .title-h p {
+    margin-bottom: 10px;
+}
+.title-home .title-h h1 {
+    font-size: 30px;
+}
+
+.title-home .btn-home {
+    text-align: center;
+}
+button.global-button {
+    background-color: var(--bg-color);
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 600;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 50px;
+    position: relative;
+    border-radius: 100px;
+    transition: all .9s;
+}
+button.global-button:hover {
+    background-color: var(--bglight-color);
+    border-radius: 10px;
+}
+button a {
+    color: #fff;
+    font-weight: bold;
+}
+.title-home .btn-home span {
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* *********************************************************************************** */
+
+/* START CRYPTO */
+
+.timerdown {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+section div.crypto .crypto-left .img-left {
+    position: relative;
+}
+section div.crypto .crypto-left .img-left img.left {
+    position: absolute;
+    left: 30%;
+    top: -100px;
+    animation: animaterotate 20s linear infinite;
+}
+
+@keyframes animaterotate {
+    0% {
+        transform: rotate(-150deg);
+    }
+}
+/* ///////////////////////////////// */
+section div.crypto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 100px;
+}
+.left-process,
+.crypto .crypto-right {
+    color: #fff;
+    /* text-align: center; */
+
+}
+.crypto .crypto-right .card-crypto {
+    display: flex;
+}
+
+.crypto .crypto-right .card-crypto .item-card {
+    display: flex;
+    margin-bottom: 10px;
+
+
+}
+.left-process .cart-pro .flex div,
+.crypto .crypto-right .card-crypto .item-card  div{
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 5px;
+    
+}
+.left-process .cart-pro .flex div div:first-child,
+.crypto .crypto-right .card-crypto .item-card  div:first-child {
+    padding: 10px 20px;
+    background-color: var(--bg-color);
+    transition: all .9s;
+    cursor: pointer;
+}
+.left-process .cart-pro .flex div div:first-child:hover,
+.crypto .crypto-right .card-crypto .item-card  div:first-child:hover {
+    background-color: var(--bglight-color);
+}
+.crypto .crypto-right .card-crypto .item-card  div:last-child {
+    text-align: left;
+    width: 250px;
+    padding: 15px 15px 0;
+}
+.left-process .cart-pro .flex div img,
+.card-crypto .item-card div img {
+    height: 60px;
+}
+.crypto .crypto-right .title-crypto h2 {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+
+}
+.crypto .crypto-right .title-crypto p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* END CRYPTO */
+
+/* ******************************************************************************************************** */
+
+.token {
+    color: #fff;
+    width: 100%;
+    margin: 20px 0;
+    padding: 100px;
+    position: relative;
+}
+.rotate  {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    z-index: -100;
+    animation: animaterotate 20s linear infinite;
+}
+.rotate img {
+    width: 450px;
+}
+.title-questions,
+.title-exchange,
+.project-plan,
+.title-partner,
+.cointech-ico,
+.title-token {
+    text-align: center;
+}
+.title-questions h2,
+.title-exchange h2,
+.project-plan h2,
+.title-partner h2,
+.cointech-ico h2,
+.title-token h2 {
+    font-size: 35px;
+    font-weight: 900;
+}
+.title-questions p,
+.title-exchange p,
+.project-plan p,
+.title-partner p,
+.cointech-ico p ,
+.title-token p {
+    font-weight: 400;
+    margin: 20px;
+}
+.items-token {
+    
+    width: 100%;
+}
+div.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.items-token div.flex .item-token {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(255 255 255 / 12%);
+    width: 350px;
+    margin: 10px;
+    box-shadow: 2px 4px 16px rgb(0 0 0 / 10%);
+    padding: 25px;
+}
+.content-item {
+    color: #fff;
+}
+.content-item p {
+    font-size: 18px;
+    line-height: 24px;
+}
+.content-item h3 {
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 10px 0;
+}
+.content-item span {
+    font-size: 16px;
+    font-weight: 400;
+}
+.content-item span:first-of-type {
+    
+    color: var(--gray-color);
+    margin-right: 10px;
+    display: inline-block;
+}
+.content-item span:last-of-type {
+    color: red;
+
+}
+.content-item span.up {
+    color: green;
+}
+.items-token .icon-token img {
+    width: 75px;
+    margin-right: 20px;
+    transition: all 0.5s;
+}
+
+.items-token div.flex .item-token:hover .icon-token img {
+    transform:rotate(15deg)
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.cointech-ico {
+    color: #fff;
+}
+.items-coin {
+    width: 90%;
+    margin: 10px auto;
+}
+.item-coin .img-coin img {
+    height: 77px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.item-coin {
+    border: 1px solid rgb(255 255 255 / 12%);
+    box-shadow: 0 0 6px #777;
+    margin: 20px;
+    padding: 30px;
+    position: relative;
+}
+.item-coin::before {
+    content: '';
+    position: absolute;
+    background-color: var(--bg-color);
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    transition: all 0.5s;
+}
+.item-coin:hover::before{
+    width: 100%;
+}
+.item-coin .img-coin::before {
+    content: '';
+    position: absolute;
+    margin-bottom: 20px;
+    background-color: var(--bg-color);
+    width: 75px;
+    height: 75px;
+    top: 5%;
+    left: 32%;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.item-coin .img-coin:hover::before {
+    background-color: var(--bglight-color);
+    transform: rotate(180deg);
+}
+/* //////////////////////////////////////////////////////////////////////// */
+.title-partner {
+    color: #fff;
+}
+.items-partner {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 50px auto;
+}
+.contain-part {
+    position: relative;
+    width: calc(100% /6);
+    border: 1px solid rgb(255 255 255 / 12%);
+}
+.contain-part img {
+    opacity: 0.8;
+    transition: all .5s ease-out;
+    padding: 8px;
+    padding-bottom: 15px;
+    filter: grayscale(100%);
+    width: 78%;
+    margin-left: 35px;
+    cursor: pointer;
+}
+.contain-part img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+/* *************************************************** */
+
+/* ico-process */
+.ico-process {
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.ico-process div.flex {
+    margin-bottom: 40px;
+}
+.ico-process .right-process,
+.ico-process .left-process {
+    width: 50%;
+    
+}
+.ico-process .left-process {
+    position: relative;
+}
+.ico-process .right-process .title-right-pro h2,
+.ico-process .left-process .title-left-pro h2{
+    font-size: 35px;
+    font-weight: 900;
+}
+.ico-process .right-process .title-right-pro p,
+.ico-process .left-process .title-left-pro p{
+    margin: 20px 0;
+    font-weight: 400;
+}
+.ico-process .left-process .item-pro {
+    display: flex;
+}
+.contain-cart-pro {
+    padding: 10px;
+}
+.rotate-pro img {
+    position: absolute;
+    left: 30%;
+    top: -70px;
+    z-index: -100;
+    animation: animaterotate 20s linear infinite;
+}
+.ico-process .right-process .title-right-pro{
+    color: #fff ;
+    text-align: center;
+}
+.ico-process .right-process .contain-right-pro img {
+    display: block;
+    height: 400px;
+    width: 695px;
+}
+
+/* *************************************************************************** */
+
+/* project-plan */
+.project-plan {
+    color: #fff;
+    position: relative;
+    padding-top: 60px;
+    width: 90%;
+    margin: 10px auto;
+}
+.img-plan img {
+    width: 90%;
+}
+
+/* ************************************************* */
+/* exchange */
+
+.exchange {
+    color: #fff;
+    margin: 40px auto;    
+    width: 90%;
+    position: relative;
+}
+.img-exchange img {
+    position: absolute;
+    left: 33%;
+    width: 500px;
+    top: 170px;
+    animation: animateB 8s linear infinite;
+}
+@keyframes animateB {
+    0% {
+        transform: translateX(20px);
+    }
+    50%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(20px);
+    }
+}
+.item-ex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.icon-ex {
+    display: flex;
+    align-items: center;
+}
+.exchange .contain-exchange img {
+    width: 40px;
+    margin-right: 50px;
+    
+}
+.item-ex h3 {
+    font-weight: bold;
+}
+.item-ex p {
+    display: inline-block;
+    line-height: 1;
+    margin-left: 10px;
+}
+.item-ex .num-ex span:first-child {
+    color: var(--gray-color);
+}
+.item-ex .num-ex span.red {
+    color: red;
+    margin-left: 15px;
+}
+.item-ex .num-ex span.green {
+    color: green;
+    margin-left: 15px;
+}
+
+/* *************************************************************** */
+
+/* start questions */
+
+.questions {
+    color: #fff;
+    margin: 30px auto;
+    width: 90%;
+}
+.contain-q label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#plus:checked .contain-q label{
+    color: red;
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+/* START REQUEST FORM */
+.contain-q label {
+    cursor: pointer;
+    background-color: #121212;
+    padding: 20px 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    z-index: 10;
+}
+.contain-q p {
+    padding: 5px 0 20px 30px;
+    transition: all 0.5s;
+}
+.contain-q input {
+    display: none;
+}
+label i.fa-plus:active {
+    transform: rotate(180deg);
+}
+.contain-q p.hidden {
+    display: none;
+}
+#plus-one:checked~p.hidden{
+    display: block;
+}
+/* *************** */
+.contain-q .hidden-two {
+    display: none;
+}
+#plus-two:checked~p.hidden-two{
+    display: flex;
+}
+/* *************** */
+.contain-q .hidden-three {
+    display: none;
+}
+#plus-three:checked~p.hidden-three{
+    display: flex;
+}
+/* *************** */
+.contain-q .hidden-four {
+    display: none;
+}
+#plus-four:checked~p.hidden-four{
+    display: flex;
+}
+/* *************** */
+.contain-q .hidden-five {
+    display: none;
+}
+#plus-five:checked~p.hidden-five{
+    display: flex;
+}
+/* *************** */
+/* ********************************************************************************* */
+
+.form {
+    color: #fff;
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+.form h2 {
+    background-color: var(--bg-color);
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 100px;
+    margin-bottom: -50px;
+}
+.contain-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid var(--gray-color);
+    padding: 50px 0 30px;
+}
+.contain-form input {
+    height: 65px;
+    border-radius: 100px;
+    padding-left: 15px;
+    border: 0;
+    outline: 0;
+}
+.contain-form button {
+    background-color: var(--bg-color);
+    height: 65px;
+    padding: 0 40px;
+    border: 2px solid var(--gray-color);
+    border-radius: 100px;
+    cursor: pointer;
+}
+.contain-form button i {
+    color: #fff;
+}
+/* END REQUEST FORM */
+
+
+
+
+
+
+
+
+
